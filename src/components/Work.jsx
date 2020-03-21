@@ -12,17 +12,15 @@ export default function Work() {
 
       <img src={coffee} alt="" />
       <p>
-        <Link to="https://space-x.bradenbell.now.sh/">Space X</Link>,{"  "}
-        //todo LINK BUTTON BACK TO PORTFOLIO IN NASA
-        <Link to="https://nasa-photo-of-the-day.bradenbell.now.sh/">
+        <a href="https://space-x.bradenbell.now.sh/">Space X</a>,{"  "}
+        <a href="https://nasa-photo-of-the-day.bradenbell.now.sh/">
           Photo of the Day
-        </Link>
+        </a>
         ,{"  "}
-        <Link to="https://todo-list.bradenbell.now.sh/">Todo List</Link>, and{" "}
-        {"  "}
-        <Link to="https://baseball-scoreboard.bradenbell.now.sh/">
+        <a href="https://todo-list.bradenbell.now.sh/">Todo List</a>, and {"  "}
+        <a href="https://baseball-scoreboard.bradenbell.now.sh/">
           Baseball Scoreboard
-        </Link>{" "}
+        </a>{" "}
         are just a few of my projects I have completed.{"  "}
         If you see anything that interests you, or have any additional questions
         please send me a <Link to="/contact">message.</Link>
