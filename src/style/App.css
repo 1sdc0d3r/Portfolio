@@ -1,0 +1,504 @@
+.App {
+  text-align: center;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding-top: 20%;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .App {
+    padding-top: 10%;
+  }
+}
+
+.home .header {
+  border-top: 2px solid #fafafa;
+  border-bottom: 2px solid #fafafa;
+  width: 90%;
+  margin: 10vh auto 0.5rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .home .header {
+    width: 85%;
+    margin-bottom: 0;
+  }
+}
+
+h1 {
+  font-style: italic;
+  font-size: 2rem;
+  color: #fafafa;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  margin: auto;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 65%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 0;
+    border: 0.75px solid #fafafa;
+    border-right: 2px solid #fafafa;
+    border-left: 2px solid #fafafa;
+    border-top: none;
+  }
+}
+
+nav a {
+  padding: 0.35rem;
+  text-decoration: none;
+  color: #fafafa;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  nav a {
+    border: 1.25px solid #fafafa;
+    border-top: 0.5px solid #fafafa;
+    width: 25%;
+    font-size: 1.2rem;
+  }
+}
+
+.intro {
+  background: #363b41;
+  width: 78%;
+  margin: auto;
+  padding-bottom: 1.5rem;
+}
+
+.intro .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fafafa;
+}
+
+.intro .top a {
+  position: absolute;
+  margin: 0.75rem -0.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ce2626;
+  font-size: 1.75rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .intro .top a {
+    font-size: 1.65rem;
+    margin: 0.4rem -0.5rem;
+  }
+}
+
+.intro .top h2 {
+  margin: 0.75rem auto 0.35rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .intro .top h2 {
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.intro img {
+  margin-top: 2vh;
+  width: 80%;
+  height: 30%;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .intro img {
+    width: 65%;
+    height: 50vh;
+    border: 2px groove #363b41;
+  }
+}
+
+.intro p {
+  padding: 0 1rem;
+  color: #fafafa;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .intro p {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+.intro a {
+  color: #1e97c7;
+  text-decoration: none;
+}
+
+.work {
+  background: #363b41;
+  width: 78%;
+  margin: auto;
+  padding-bottom: 1.5rem;
+  border: 5px solid #363b41;
+}
+
+.work .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fafafa;
+}
+
+.work .top a {
+  position: absolute;
+  margin: 0.75rem -0.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ce2626;
+  font-size: 1.75rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .work .top a {
+    font-size: 1.65rem;
+    margin: 0.4rem -0.5rem;
+  }
+}
+
+.work .top h2 {
+  margin: 0.75rem auto 0.35rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .work .top h2 {
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.work img {
+  margin-top: 2vh;
+  width: 80%;
+  height: 30%;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .work img {
+    width: 65%;
+    height: 50vh;
+    border: 2px groove #363b41;
+  }
+}
+
+.work p {
+  padding: 0 1rem;
+  color: #fafafa;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .work p {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+.work a {
+  color: #1e97c7;
+  text-decoration: none;
+}
+
+.about {
+  background: #363b41;
+  width: 78%;
+  margin: auto;
+  padding-bottom: 1.5rem;
+}
+
+.about .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fafafa;
+}
+
+.about .top a {
+  position: absolute;
+  margin: 0.75rem -0.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ce2626;
+  font-size: 1.75rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .about .top a {
+    font-size: 1.65rem;
+    margin: 0.4rem -0.5rem;
+  }
+}
+
+.about .top h2 {
+  margin: 0.75rem auto 0.35rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .about .top h2 {
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.about img {
+  margin-top: 2vh;
+  width: 80%;
+  height: 30%;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .about img {
+    width: 65%;
+    height: 50vh;
+    border: 2px groove #363b41;
+  }
+}
+
+.about p {
+  padding: 0 1rem;
+  color: #fafafa;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .about p {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+.about a {
+  color: #1e97c7;
+  text-decoration: none;
+}
+
+.about img {
+  border-radius: 3%;
+}
+
+.contact {
+  background: #363b41;
+  width: 78%;
+  margin: auto;
+  padding-bottom: 1.5rem;
+  background: #4e4e4e;
+  border: 3px solid black;
+  border-radius: 1%;
+}
+
+.contact .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fafafa;
+}
+
+.contact .top a {
+  position: absolute;
+  margin: 0.75rem -0.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ce2626;
+  font-size: 1.75rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact .top a {
+    font-size: 1.65rem;
+    margin: 0.4rem -0.5rem;
+  }
+}
+
+.contact .top h2 {
+  margin: 0.75rem auto 0.35rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact .top h2 {
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.contact img {
+  margin-top: 2vh;
+  width: 80%;
+  height: 30%;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact img {
+    width: 65%;
+    height: 50vh;
+    border: 2px groove #363b41;
+  }
+}
+
+.contact p {
+  padding: 0 1rem;
+  color: #fafafa;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact p {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+.contact a {
+  color: #1e97c7;
+  text-decoration: none;
+}
+
+.contact .top h2 {
+  margin-bottom: 1.7rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact .top h2 {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact form label {
+  margin: 0.35rem auto;
+  color: #fafafa;
+  width: 85%;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact form label {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}
+
+.contact form input {
+  background: #363b41;
+  color: #fafafa;
+  padding: 0.35rem;
+  width: 80%;
+  margin: 0.25rem auto 0.5rem;
+  border: 2px inset #fafafa;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+.contact form #message {
+  background: #363b41;
+  color: #fafafa;
+  width: 80%;
+  padding: 0.35rem;
+  margin: 0.25rem auto 0.5rem;
+  border: 2px inset #fafafa;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact form #message {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact form .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 0.5rem auto;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact form .actions {
+    margin-bottom: 0;
+  }
+}
+
+.contact form .actions input {
+  width: 44%;
+  border: 2px ridge #fafafa;
+  border-radius: 3%;
+}
+
+.contact .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 1.25rem auto 1rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+  .contact .icons {
+    margin: 1.35rem auto;
+  }
+}
+
+.contact .icons a {
+  margin: 0 2%;
+  padding: 0.125rem;
+}
+/*# sourceMappingURL=App.css.map */
