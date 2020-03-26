@@ -283,6 +283,10 @@ nav a {
   color: #fafafa;
 }
 
+nav a:hover {
+  color: #555555;
+}
+
 @media (min-width: 450px) and (max-width: 800px) {
   nav a {
     border: 1.25px solid #fafafa;
@@ -435,6 +439,10 @@ nav a {
   border-radius: 3%;
 }
 
+.contact form .actions input:hover {
+  background: #555555;
+}
+
 .contact .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,5 +462,10 @@ nav a {
 .contact .icons a {
   margin: 0 2%;
   padding: 0.125rem;
+  border-radius: 50%;
+}
+
+.contact .icons a:hover {
+  background: #bd0f60;
 }
 /*# sourceMappingURL=App.css.map */

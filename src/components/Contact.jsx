@@ -87,11 +87,20 @@ export default function Contact() {
       </form>
 
       <div className="icons">
-        <SocialIcon target="_blank" url="https://github.com/1sdc0d3r" />
-        <SocialIcon target="_blank" url="https://twitter.com/BradenBell19" />
+        <SocialIcon
+          target="_blank"
+          url="https://github.com/1sdc0d3r"
+          id="github"
+        />
+        <SocialIcon
+          target="_blank"
+          url="https://twitter.com/BradenBell19"
+          id="twitter"
+        />
         <SocialIcon
           target="_blank"
           url="https://www.linkedin.com/in/braden-bell-73b168165/"
+          id="linkedin"
         />
       </div>
     </div>
