@@ -4,12 +4,27 @@
   background-size: cover;
   width: 100%;
   height: 100vh;
-  padding-top: 20%;
+}
+
+.App .overlay {
+  background-image: url("../images/overlay.png");
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  padding-top: 20vh;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .App {
-    padding-top: 10%;
+  .App .overlay {
+    padding-top: 10vh;
+    height: 90vh;
+  }
+}
+
+@media (min-width: 800px) {
+  .App .overlay {
+    padding-top: 12vh;
+    height: 88vh;
   }
 }
 
@@ -27,6 +42,13 @@
   }
 }
 
+@media (min-width: 800px) {
+  .home .header {
+    width: 93%;
+    margin: auto;
+  }
+}
+
 h1 {
   font-style: italic;
   font-size: 2rem;
@@ -36,6 +58,21 @@ h1 {
 @media (min-width: 450px) and (max-width: 800px) {
   h1 {
     font-size: 3rem;
+  }
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  p {
+    color: #161616;
+    margin: 0.75rem auto;
+    margin-bottom: 1.5rem;
+    width: 90%;
   }
 }
 
@@ -68,6 +105,19 @@ nav {
   }
 }
 
+@media (min-width: 800px) {
+  nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 1rem;
+  }
+}
+
 nav a {
   padding: 0.35rem;
   text-decoration: none;
@@ -83,11 +133,26 @@ nav a {
   }
 }
 
+@media (min-width: 800px) {
+  nav a {
+    width: 25%;
+    font-size: 1.3rem;
+  }
+}
+
 .intro {
   background: #363b41;
   width: 78%;
   margin: auto;
   padding-bottom: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .intro {
+    width: 55%;
+    height: 60vh;
+    border: 2.5px solid #23272a;
+  }
 }
 
 .intro .top {
@@ -116,6 +181,13 @@ nav a {
   }
 }
 
+@media (min-width: 800px) {
+  .intro .top a {
+    font-size: 1.85rem;
+    margin: 0.4rem -0.5rem;
+  }
+}
+
 .intro .top h2 {
   margin: 0.75rem auto 0.35rem;
 }
@@ -127,34 +199,73 @@ nav a {
   }
 }
 
-.intro img {
+@media (min-width: 800px) {
+  .intro .top h2 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 800px) {
+  .intro .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.intro .bottom img {
   margin-top: 2vh;
   width: 80%;
   height: 30%;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .intro img {
+  .intro .bottom img {
     width: 65%;
     height: 50vh;
     border: 2px groove #363b41;
   }
 }
 
-.intro p {
+@media (min-width: 800px) {
+  .intro .bottom img {
+    width: 40%;
+    height: 35vh;
+    border: 2px groove #363b41;
+  }
+}
+
+.intro .bottom p {
   padding: 0 1rem;
   color: #fafafa;
   font-size: 0.85rem;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .intro p {
+  .intro .bottom p {
     width: 80%;
     margin: 2rem auto;
   }
 }
 
-.intro a {
+@media (min-width: 800px) {
+  .intro .bottom p {
+    margin: auto;
+    line-height: 1.35rem;
+    letter-spacing: 0.085rem;
+    width: 50%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+}
+
+.intro .bottom a {
   color: #1e97c7;
   text-decoration: none;
 }
@@ -165,6 +276,14 @@ nav a {
   margin: auto;
   padding-bottom: 1.5rem;
   border: 5px solid #363b41;
+}
+
+@media (min-width: 800px) {
+  .work {
+    width: 55%;
+    height: 60vh;
+    border: 2.5px solid #23272a;
+  }
 }
 
 .work .top {
@@ -193,6 +312,13 @@ nav a {
   }
 }
 
+@media (min-width: 800px) {
+  .work .top a {
+    font-size: 1.85rem;
+    margin: 0.4rem -0.5rem;
+  }
+}
+
 .work .top h2 {
   margin: 0.75rem auto 0.35rem;
 }
@@ -204,34 +330,73 @@ nav a {
   }
 }
 
-.work img {
+@media (min-width: 800px) {
+  .work .top h2 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 800px) {
+  .work .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.work .bottom img {
   margin-top: 2vh;
   width: 80%;
   height: 30%;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .work img {
+  .work .bottom img {
     width: 65%;
     height: 50vh;
     border: 2px groove #363b41;
   }
 }
 
-.work p {
+@media (min-width: 800px) {
+  .work .bottom img {
+    width: 40%;
+    height: 35vh;
+    border: 2px groove #363b41;
+  }
+}
+
+.work .bottom p {
   padding: 0 1rem;
   color: #fafafa;
   font-size: 0.85rem;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .work p {
+  .work .bottom p {
     width: 80%;
     margin: 2rem auto;
   }
 }
 
-.work a {
+@media (min-width: 800px) {
+  .work .bottom p {
+    margin: auto;
+    line-height: 1.35rem;
+    letter-spacing: 0.085rem;
+    width: 50%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+}
+
+.work .bottom a {
   color: #1e97c7;
   text-decoration: none;
 }
@@ -241,6 +406,14 @@ nav a {
   width: 78%;
   margin: auto;
   padding-bottom: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .about {
+    width: 55%;
+    height: 60vh;
+    border: 2.5px solid #23272a;
+  }
 }
 
 .about .top {
@@ -269,6 +442,13 @@ nav a {
   }
 }
 
+@media (min-width: 800px) {
+  .about .top a {
+    font-size: 1.85rem;
+    margin: 0.4rem -0.5rem;
+  }
+}
+
 .about .top h2 {
   margin: 0.75rem auto 0.35rem;
 }
@@ -280,34 +460,73 @@ nav a {
   }
 }
 
-.about img {
+@media (min-width: 800px) {
+  .about .top h2 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 800px) {
+  .about .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.about .bottom img {
   margin-top: 2vh;
   width: 80%;
   height: 30%;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .about img {
+  .about .bottom img {
     width: 65%;
     height: 50vh;
     border: 2px groove #363b41;
   }
 }
 
-.about p {
+@media (min-width: 800px) {
+  .about .bottom img {
+    width: 40%;
+    height: 35vh;
+    border: 2px groove #363b41;
+  }
+}
+
+.about .bottom p {
   padding: 0 1rem;
   color: #fafafa;
   font-size: 0.85rem;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .about p {
+  .about .bottom p {
     width: 80%;
     margin: 2rem auto;
   }
 }
 
-.about a {
+@media (min-width: 800px) {
+  .about .bottom p {
+    margin: auto;
+    line-height: 1.35rem;
+    letter-spacing: 0.085rem;
+    width: 50%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+}
+
+.about .bottom a {
   color: #1e97c7;
   text-decoration: none;
 }
@@ -324,6 +543,14 @@ nav a {
   background: #4e4e4e;
   border: 3px solid black;
   border-radius: 1%;
+}
+
+@media (min-width: 800px) {
+  .contact {
+    width: 55%;
+    height: 60vh;
+    border: 2.5px solid #23272a;
+  }
 }
 
 .contact .top {
@@ -352,6 +579,13 @@ nav a {
   }
 }
 
+@media (min-width: 800px) {
+  .contact .top a {
+    font-size: 1.85rem;
+    margin: 0.4rem -0.5rem;
+  }
+}
+
 .contact .top h2 {
   margin: 0.75rem auto 0.35rem;
 }
@@ -363,36 +597,81 @@ nav a {
   }
 }
 
-.contact img {
+@media (min-width: 800px) {
+  .contact .top h2 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 800px) {
+  .contact .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 1rem auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.contact .bottom img {
   margin-top: 2vh;
   width: 80%;
   height: 30%;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .contact img {
+  .contact .bottom img {
     width: 65%;
     height: 50vh;
     border: 2px groove #363b41;
   }
 }
 
-.contact p {
+@media (min-width: 800px) {
+  .contact .bottom img {
+    width: 40%;
+    height: 35vh;
+    border: 2px groove #363b41;
+  }
+}
+
+.contact .bottom p {
   padding: 0 1rem;
   color: #fafafa;
   font-size: 0.85rem;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
-  .contact p {
+  .contact .bottom p {
     width: 80%;
     margin: 2rem auto;
   }
 }
 
-.contact a {
+@media (min-width: 800px) {
+  .contact .bottom p {
+    margin: auto;
+    line-height: 1.35rem;
+    letter-spacing: 0.085rem;
+    width: 50%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+}
+
+.contact .bottom a {
   color: #1e97c7;
   text-decoration: none;
+}
+
+@media (min-width: 800px) {
+  .contact {
+    height: 75vh;
+  }
 }
 
 .contact .top h2 {

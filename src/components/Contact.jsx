@@ -1,9 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import * as emailjs from "emailjs-com";
 
 export default function Contact() {
-  // const onSubmit = evt => {}
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const onChangeHandler = evt => {
+    setData({
+      ...data,
+      [evt.target.name]: evt.target.value
+    });
+  };
+
+  const onSubmitHandler = evt => {
+    evt.preventDefault();
+
+    const templateParams = {
+      subject: "Portfolio Contact",
+      to_name: "Braden",
+      from_name: data.name,
+      message_html: data.message
+    };
+
+    // emailjs.send(
+    //   "gmail",
+    //   "template_SswCjIcl",
+    //   templateParams,
+    //   "user_vhx6Zrv5irvL2nLhnctr5"
+    // );
+  };
+
+  const resetHandler = () => {
+    setData({
+      name: "",
+      email: "",
+      message: ""
+    });
+  };
+
   return (
     <div className="contact">
       <div className="top">
@@ -11,18 +50,23 @@ export default function Contact() {
         <Link to="/">X</Link>
       </div>
       {/* //todo FORM ACTION */}
-      <form method="post" action="">
+      <form onSubmit={onSubmitHandler}>
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" onChange={onChangeHandler} />
 
         <label for="email">Email</label>
-        <input type="text" name="email" id="email" />
+        <input type="text" name="email" id="email" onChange={onChangeHandler} />
 
         <label for="message">Message</label>
-        <textarea name="message" id="message" rows="6"></textarea>
+        <textarea
+          name="message"
+          id="message"
+          rows="6"
+          onChange={onChangeHandler}
+        />
         <div className="actions">
           <input type="submit" value="Send Message" />
-          <input type="reset" value="Reset" />
+          <input type="reset" value="Reset" onClick={() => resetHandler} />
         </div>
       </form>
 

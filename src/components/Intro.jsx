@@ -11,12 +11,14 @@ export default function Intro() {
       </div>
 
       {/* //todo replace img for profile */}
-      <img src={profileImg} alt="" />
-      <p>
-        I am a fullstack developer who codes his dreams into reality. I love to
-        help others solve their problems in unique solutions and bring their
-        dreams into existence.
-      </p>
+      <div className="bottom">
+        <img src={profileImg} alt="" />
+        <p>
+          I am a fullstack developer who codes his dreams into reality. I love
+          to help others solve their problems in unique solutions and bring
+          their dreams into existence.
+        </p>
+      </div>
     </div>
   );
 }
