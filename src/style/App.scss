@@ -1,5 +1,5 @@
 $white: rgb(250, 250, 250);
-$darkGrey: rgb(54, 59, 65);
+$grey: rgb(54, 59, 65);
 $colors: (
   white: rgb(275, 275, 275)
 );
@@ -18,19 +18,24 @@ $colors: (
 
 @mixin section() {
   // background-size: cover;
-  background: $darkGrey;
+  background: $grey;
   width: 78%;
   margin: auto;
   padding-bottom: 1.5rem;
 
-  @include for-tablet() {
-    // height: 50vh;
+  @include for-desktop() {
+    width: 55%;
+    height: 60vh;
+    border: 2.5px solid rgb(35, 39, 42);
   }
 
   .top {
     display: flex;
     justify-content: flex-end;
     color: $white;
+    @include for-desktop() {
+      // margin-bottom: 0.7rem;
+    }
 
     a {
       position: absolute;
@@ -43,6 +48,10 @@ $colors: (
         font-size: 1.65rem;
         margin: 0.4rem -0.5rem;
       }
+      @include for-desktop() {
+        font-size: 1.85rem;
+        margin: 0.4rem -0.5rem;
+      }
     }
     h2 {
       margin: 0.75rem auto 0.35rem;
@@ -51,32 +60,59 @@ $colors: (
         font-size: 2.2rem;
         margin-top: 1.2rem;
       }
+      @include for-desktop() {
+        font-size: 2.2rem;
+        text-decoration: underline;
+        // font-style:
+      }
     }
   }
-  img {
-    // add a min/max width
-    margin-top: 2vh;
-    width: 80%;
-    height: 30%;
-    @include for-tablet() {
-      width: 65%;
-      height: 50vh;
-      border: 2px groove $darkGrey;
+  .bottom {
+    @include for-desktop() {
+      display: flex;
+      width: 90%;
+      margin: 1rem auto;
+      justify-content: space-around;
     }
-  }
-  p {
-    padding: 0 1rem;
-    color: $white;
-    font-size: 0.85rem;
-    // margin-bottom: 2rem;
-    @include for-tablet() {
+    img {
+      // add a min/max width
+      margin-top: 2vh;
       width: 80%;
-      margin: 2rem auto;
+      height: 30%;
+      @include for-tablet() {
+        width: 65%;
+        height: 50vh;
+        border: 2px groove $grey;
+      }
+      @include for-desktop() {
+        width: 40%;
+        height: 35vh;
+        border: 2px groove $grey;
+        // border: 9px solid pink;
+      }
     }
-  }
-  a {
-    color: rgb(30, 151, 199);
-    text-decoration: none;
+    p {
+      padding: 0 1rem;
+      color: $white;
+      font-size: 0.85rem;
+      // margin-bottom: 2rem;
+      @include for-tablet() {
+        width: 80%;
+        margin: 2rem auto;
+      }
+      @include for-desktop() {
+        margin: auto;
+        line-height: 1.35rem;
+        letter-spacing: 0.085rem;
+        width: 50%;
+        justify-content: space-around;
+        text-align: left;
+      }
+    }
+    a {
+      color: rgb(30, 151, 199);
+      text-decoration: none;
+    }
   }
 }
 
@@ -86,12 +122,23 @@ $colors: (
   background-size: cover;
   width: 100%;
   height: 100vh;
-  padding-top: 20%;
-  @include for-tablet() {
-    padding-top: 10%;
+
+  .overlay {
+    background-image: url("../images/overlay.png");
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    padding-top: 20vh;
+    @include for-tablet() {
+      padding-top: 10vh;
+      height: 90vh;
+    }
+    @include for-desktop() {
+      padding-top: 12vh;
+      height: 88vh;
+    }
   }
 }
-
 .home .header {
   border-top: 2px solid $white;
   border-bottom: 2px solid $white;
@@ -101,6 +148,10 @@ $colors: (
     width: 85%;
     margin-bottom: 0;
   }
+  @include for-desktop() {
+    width: 93%;
+    margin: auto;
+  }
 }
 h1 {
   //todo change font
@@ -109,6 +160,17 @@ h1 {
   color: $white;
   @include for-tablet() {
     font-size: 3rem;
+  }
+  @include for-desktop() {
+    font-size: 3.2rem;
+  }
+}
+p {
+  @include for-desktop() {
+    color: #161616;
+    margin: 0.75rem auto;
+    margin-bottom: 1.5rem;
+    width: 90%;
   }
 }
 nav {
@@ -129,11 +191,16 @@ nav {
     border-left: 2px solid $white;
     border-top: none;
   }
+  @include for-desktop() {
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
 
   a {
     padding: 0.35rem;
     text-decoration: none;
-    // color: rgb(60, 60, 212);
     color: $white;
 
     @include for-tablet() {
@@ -142,6 +209,10 @@ nav {
       width: 25%;
       font-size: 1.2rem;
       // font-weight: bold;
+    }
+    @include for-desktop() {
+      width: 25%;
+      font-size: 1.3rem;
     }
   }
 }
@@ -152,7 +223,7 @@ nav {
 
 .work {
   @include section;
-  border: 5px solid $darkGrey;
+  border: 5px solid $grey;
 }
 
 .about {
@@ -168,6 +239,9 @@ nav {
   background: rgb(78, 78, 78);
   border: 3px solid black;
   border-radius: 1%;
+  @include for-desktop() {
+    height: 75vh;
+  }
 
   .top h2 {
     margin-bottom: 1.7rem;
@@ -193,7 +267,7 @@ nav {
       }
     }
     input {
-      background: $darkGrey;
+      background: $grey;
       color: $white;
       padding: 0.35rem;
       width: 80%;
@@ -206,7 +280,7 @@ nav {
       }
     }
     #message {
-      background: $darkGrey;
+      background: $grey;
       color: $white;
       width: 80%;
       padding: 0.35rem;

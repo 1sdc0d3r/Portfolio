@@ -9,14 +9,16 @@ export default function About() {
         <h2>About</h2>
         <Link to="/">X</Link>
       </div>
-      <img src={profileImg} alt="" />
-      <p>
-        {" "}
-        I am a developer who strives to learn something daily. One of my life
-        goals is to become a professional bass fisherman. With the talents I
-        learn every day as a developer guide me down that path. I love being the
-        color in a world of binary.
-      </p>
+      <div className="bottom">
+        <img src={profileImg} alt="" />
+        <p>
+          {" "}
+          I am a developer who strives to learn something daily. One of my life
+          goals is to become a professional bass fisherman. With the talents I
+          learn every day as a developer guide me down that path. I love being
+          the color in a world of binary.
+        </p>
+      </div>
     </div>
   );
 }

@@ -8,9 +8,11 @@ export default function Home() {
         <h1>Braden's Portfolio</h1>
         <p>
           {" "}
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque omnis
-          beatae facilis, modi quia libero veniam repellat placeat, natus saepe
-          fugiat optio quo error obcaecati impedit consectetur in fuga nam?
+          This portfolio displays some skills I developed as a Lambda Web
+          Development Student. Some of my skills include:
+          <br />
+          HTML, CSS, SASS, Javascript, React, Redux, NodeJS, Express, SQL, as
+          well as testing.
         </p>
       </div>
       <nav>
