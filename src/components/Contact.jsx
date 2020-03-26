@@ -27,12 +27,12 @@ export default function Contact() {
       message_html: data.message
     };
 
-    // emailjs.send(
-    //   "gmail",
-    //   "template_SswCjIcl",
-    //   templateParams,
-    //   "user_vhx6Zrv5irvL2nLhnctr5"
-    // );
+    emailjs.send(
+      "gmail",
+      "template_SswCjIcl",
+      templateParams,
+      "user_vhx6Zrv5irvL2nLhnctr5"
+    );
   };
 
   const resetHandler = () => {
@@ -72,9 +72,7 @@ export default function Contact() {
 
       <div className="icons">
         <SocialIcon url="https://github.com/1sdc0d3r" />
-
         <SocialIcon url="https://twitter.com/BradenBell19" />
-
         <SocialIcon url="https://www.linkedin.com/in/braden-bell-73b168165/" />
       </div>
     </div>
