@@ -33,6 +33,8 @@ export default function Contact() {
       templateParams,
       "user_vhx6Zrv5irvL2nLhnctr5"
     );
+
+    resetHandler();
   };
 
   const resetHandler = () => {
@@ -52,16 +54,29 @@ export default function Contact() {
       {/* //todo FORM ACTION */}
       <form onSubmit={onSubmitHandler}>
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" onChange={onChangeHandler} />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          value={data.name}
+          onChange={onChangeHandler}
+        />
 
         <label for="email">Email</label>
-        <input type="text" name="email" id="email" onChange={onChangeHandler} />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          value={data.email}
+          onChange={onChangeHandler}
+        />
 
         <label for="message">Message</label>
         <textarea
           name="message"
           id="message"
           rows="6"
+          value={data.message}
           onChange={onChangeHandler}
         />
         <div className="actions">
