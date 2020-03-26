@@ -19,7 +19,7 @@ $colors: (
 
 @keyframes fade-in {
   0% {
-    opacity: 0;
+    opacity: 0.05;
   }
   50% {
     opacity: 0.6;
@@ -35,103 +35,110 @@ $colors: (
   margin: auto;
   padding-bottom: 1.5rem;
   animation: fade-in 0.6s linear;
-}
 
-@include for-desktop() {
-  width: 55%;
-  height: 60vh;
-  border: 2.5px solid rgb(35, 39, 42);
-}
+  @include for-tablet() {
+    height: 100%;
+    margin-bottom: 1.5rem;
+    // border: 5px solid green;
+  }
 
-.top {
-  display: flex;
-  justify-content: flex-end;
-  color: $white;
   @include for-desktop() {
-    // margin-bottom: 0.7rem;
+    width: 55%;
+    height: 60vh;
+    border: 2.5px solid rgb(35, 39, 42);
   }
 
-  a {
-    position: absolute;
-    margin: 0.75rem -0.75rem;
-    font-weight: bold;
-    text-decoration: none;
-    // color: rgb(206, 38, 38);
-    color: rgb(23, 24, 26);
-    font-size: 1.75rem;
-    width: 1.75rem;
-    padding: 0.125rem;
-    &:hover {
-      background: $grey;
-      border-radius: 50%;
-    }
-    @include for-tablet() {
-      font-size: 1.65rem;
-      width: 1.65rem;
-      margin: 0.4rem -0.5rem;
-    }
-    @include for-desktop() {
-      font-size: 1.85rem;
-      width: 1.85rem;
-      margin: 0.4rem -0.5rem;
-    }
-  }
-  h2 {
-    margin: 0.75rem auto 0.35rem;
-    // border-bottom: 2px solid $white;
-    @include for-tablet() {
-      font-size: 2.2rem;
-      margin-top: 1.2rem;
-    }
-    @include for-desktop() {
-      font-size: 2.2rem;
-      text-decoration: underline;
-      // font-style:
-    }
-  }
-}
-.bottom {
-  @include for-desktop() {
+  .top {
     display: flex;
-    width: 90%;
-    margin: 1rem auto;
-    justify-content: space-around;
-  }
-  img {
-    margin-top: 2vh;
-    width: 80%;
-    height: 30%;
-    @include for-tablet() {
-      width: 65%;
-      height: 50vh;
-      border: 2px groove $darkGrey;
-    }
-    @include for-desktop() {
-      width: 40%;
-      height: 35vh;
-      border: 2px groove $darkGrey;
-    }
-  }
-  p {
-    padding: 0 1rem;
+    justify-content: flex-end;
     color: $white;
-    font-size: 0.85rem;
-    line-height: 1.35rem;
-    letter-spacing: 0.085rem;
-    @include for-tablet() {
-      width: 80%;
-      margin: 2rem auto;
-    }
     @include for-desktop() {
-      margin: auto;
-      width: 50%;
-      justify-content: space-around;
-      text-align: left;
+      // margin-bottom: 0.7rem;
+    }
+
+    a {
+      position: absolute;
+      margin: 0.75rem -0.75rem;
+      font-weight: bold;
+      text-decoration: none;
+      // color: rgb(206, 38, 38);
+      color: rgb(23, 24, 26);
+      font-size: 1.75rem;
+      width: 1.75rem;
+      padding: 0.125rem;
+      &:hover {
+        background: $grey;
+        border-radius: 50%;
+      }
+      @include for-tablet() {
+        font-size: 1.65rem;
+        width: 1.65rem;
+        margin: 0.4rem -0.5rem;
+      }
+      @include for-desktop() {
+        font-size: 1.85rem;
+        width: 1.85rem;
+        margin: 0.4rem -0.5rem;
+      }
+    }
+    h2 {
+      margin: 0.75rem auto 0.35rem;
+      // border-bottom: 2px solid $white;
+      @include for-tablet() {
+        font-size: 2.2rem;
+        margin-top: 1.2rem;
+      }
+      @include for-desktop() {
+        font-size: 2.2rem;
+        text-decoration: underline;
+        // font-style:
+      }
     }
   }
-  a {
-    color: rgb(30, 151, 199);
-    text-decoration: none;
+  .bottom {
+    @include for-desktop() {
+      display: flex;
+      width: 90%;
+      margin: 1rem auto;
+      justify-content: space-around;
+    }
+    // todo set max width
+    img {
+      margin-top: 2vh;
+      width: 80%;
+      height: 30%;
+      @include for-tablet() {
+        width: 65%;
+        height: 50vh;
+        border: 2px groove $darkGrey;
+      }
+      @include for-desktop() {
+        width: 40%;
+        height: 35vh;
+        border: 2px groove $darkGrey;
+      }
+    }
+    p {
+      padding: 0 1rem;
+      color: $white;
+      font-size: 0.85rem;
+      line-height: 1.35rem;
+      letter-spacing: 0.085rem;
+      @include for-tablet() {
+        width: 80%;
+        margin: 2rem auto;
+      }
+      @include for-desktop() {
+        margin: auto;
+        width: 50%;
+        justify-content: space-around;
+        text-align: left;
+      }
+    }
+    a {
+      color: rgb(30, 151, 199);
+      text-decoration: none;
+    }
   }
 }
 
@@ -141,16 +148,20 @@ $colors: (
   background-size: cover;
   width: 100%;
   height: 100vh;
+  padding-bottom: 10vh;
+  @include for-desktop {
+  }
 
   .overlay {
     background-image: url("../images/overlay.png");
     background-size: cover;
     width: 100%;
-    height: 80vh;
-    padding-top: 20vh;
+    height: 85%;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
     @include for-tablet() {
-      padding-top: 10vh;
-      height: 90vh;
+      // padding-top: 10vh;
+      // height: 100%;
     }
     @include for-desktop() {
       padding-top: 12vh;
