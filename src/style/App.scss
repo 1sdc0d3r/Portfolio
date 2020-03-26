@@ -16,103 +16,121 @@ $colors: (
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @mixin section() {
-  // background-size: cover;
   background: $grey;
   width: 78%;
   margin: auto;
   padding-bottom: 1.5rem;
+  animation: fade-in 0.6s linear;
+}
 
+@include for-desktop() {
+  width: 55%;
+  height: 60vh;
+  border: 2.5px solid rgb(35, 39, 42);
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+  color: $white;
   @include for-desktop() {
-    width: 55%;
-    height: 60vh;
-    border: 2.5px solid rgb(35, 39, 42);
+    // margin-bottom: 0.7rem;
   }
 
-  .top {
+  a {
+    position: absolute;
+    margin: 0.75rem -0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    // color: rgb(206, 38, 38);
+    color: rgb(23, 24, 26);
+    font-size: 1.75rem;
+    width: 1.75rem;
+    padding: 0.125rem;
+    &:hover {
+      background: rgb(85, 85, 85);
+      border-radius: 50%;
+    }
+    @include for-tablet() {
+      font-size: 1.65rem;
+      width: 1.65rem;
+      margin: 0.4rem -0.5rem;
+    }
+    @include for-desktop() {
+      font-size: 1.85rem;
+      width: 1.85rem;
+      margin: 0.4rem -0.5rem;
+    }
+  }
+  h2 {
+    margin: 0.75rem auto 0.35rem;
+    // border-bottom: 2px solid $white;
+    @include for-tablet() {
+      font-size: 2.2rem;
+      margin-top: 1.2rem;
+    }
+    @include for-desktop() {
+      font-size: 2.2rem;
+      text-decoration: underline;
+      // font-style:
+    }
+  }
+}
+.bottom {
+  @include for-desktop() {
     display: flex;
-    justify-content: flex-end;
-    color: $white;
+    width: 90%;
+    margin: 1rem auto;
+    justify-content: space-around;
+  }
+  img {
+    margin-top: 2vh;
+    width: 80%;
+    height: 30%;
+    @include for-tablet() {
+      width: 65%;
+      height: 50vh;
+      border: 2px groove $grey;
+    }
     @include for-desktop() {
-      // margin-bottom: 0.7rem;
-    }
-
-    a {
-      position: absolute;
-      margin: 0.75rem -0.75rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: rgb(206, 38, 38);
-      font-size: 1.75rem;
-      @include for-tablet() {
-        font-size: 1.65rem;
-        margin: 0.4rem -0.5rem;
-      }
-      @include for-desktop() {
-        font-size: 1.85rem;
-        margin: 0.4rem -0.5rem;
-      }
-    }
-    h2 {
-      margin: 0.75rem auto 0.35rem;
-      // border-bottom: 2px solid $white;
-      @include for-tablet() {
-        font-size: 2.2rem;
-        margin-top: 1.2rem;
-      }
-      @include for-desktop() {
-        font-size: 2.2rem;
-        text-decoration: underline;
-        // font-style:
-      }
+      width: 40%;
+      height: 35vh;
+      border: 2px groove $grey;
     }
   }
-  .bottom {
-    @include for-desktop() {
-      display: flex;
-      width: 90%;
-      margin: 1rem auto;
-      justify-content: space-around;
-    }
-    img {
-      // add a min/max width
-      margin-top: 2vh;
+  p {
+    padding: 0 1rem;
+    color: $white;
+    font-size: 0.85rem;
+    line-height: 1.35rem;
+    letter-spacing: 0.085rem;
+    @include for-tablet() {
       width: 80%;
-      height: 30%;
-      @include for-tablet() {
-        width: 65%;
-        height: 50vh;
-        border: 2px groove $grey;
-      }
-      @include for-desktop() {
-        width: 40%;
-        height: 35vh;
-        border: 2px groove $grey;
-        // border: 9px solid pink;
-      }
+      margin: 2rem auto;
     }
-    p {
-      padding: 0 1rem;
-      color: $white;
-      font-size: 0.85rem;
-      // margin-bottom: 2rem;
-      @include for-tablet() {
-        width: 80%;
-        margin: 2rem auto;
-      }
-      @include for-desktop() {
-        margin: auto;
-        line-height: 1.35rem;
-        letter-spacing: 0.085rem;
-        width: 50%;
-        justify-content: space-around;
-        text-align: left;
-      }
+    @include for-desktop() {
+      margin: auto;
+      width: 50%;
+      justify-content: space-around;
+      text-align: left;
     }
-    a {
-      color: rgb(30, 151, 199);
-      text-decoration: none;
-    }
+  }
+  a {
+    color: rgb(30, 151, 199);
+    text-decoration: none;
   }
 }
 
@@ -139,18 +157,21 @@ $colors: (
     }
   }
 }
-.home .header {
-  border-top: 2px solid $white;
-  border-bottom: 2px solid $white;
-  width: 90%;
-  margin: 10vh auto 0.5rem;
-  @include for-tablet() {
-    width: 85%;
-    margin-bottom: 0;
-  }
-  @include for-desktop() {
-    width: 93%;
-    margin: auto;
+.home {
+  animation: fade-in 1.2s linear;
+  .header {
+    border-top: 2px solid $white;
+    border-bottom: 2px solid $white;
+    width: 90%;
+    margin: 10vh auto 0.5rem;
+    @include for-tablet() {
+      width: 85%;
+      margin-bottom: 0;
+    }
+    @include for-desktop() {
+      width: 93%;
+      margin: auto;
+    }
   }
 }
 h1 {

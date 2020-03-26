@@ -21,6 +21,7 @@ export default function Contact() {
     evt.preventDefault();
 
     const templateParams = {
+      reply_to: data.email,
       subject: "Portfolio Contact",
       to_name: "Braden",
       from_name: data.name,
@@ -46,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact">
+    <div className="contact clicker">
       <div className="top">
         <h2>Contact</h2>
         <Link to="/">X</Link>
@@ -86,9 +87,12 @@ export default function Contact() {
       </form>
 
       <div className="icons">
-        <SocialIcon url="https://github.com/1sdc0d3r" />
-        <SocialIcon url="https://twitter.com/BradenBell19" />
-        <SocialIcon url="https://www.linkedin.com/in/braden-bell-73b168165/" />
+        <SocialIcon target="_blank" url="https://github.com/1sdc0d3r" />
+        <SocialIcon target="_blank" url="https://twitter.com/BradenBell19" />
+        <SocialIcon
+          target="_blank"
+          url="https://www.linkedin.com/in/braden-bell-73b168165/"
+        />
       </div>
     </div>
   );

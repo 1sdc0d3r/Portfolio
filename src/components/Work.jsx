@@ -4,7 +4,7 @@ import coffee from "../images/coffee.jpg";
 
 export default function Work() {
   return (
-    <div className="work">
+    <div className="work clicker">
       <div className="top">
         <h2>Work</h2>
         <Link to="/">X</Link>
@@ -45,7 +45,7 @@ export default function Work() {
           </a>{" "}
           are just a few of my projects I have completed.{"  "}
           If you see anything that interests you, or have any additional
-          questions please send me a <Link to="/contact">message.</Link>
+          questions please send a <Link to="/contact">message.</Link>
         </p>
       </div>
     </div>

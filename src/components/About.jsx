@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+// import clickHandler from "../utils/clickHandlers";
 import profileImg from "../images/bass.jpg";
 
-export default function About() {
+export default function About(props) {
   return (
-    <div className="about">
+    <div className="about clicker">
       <div className="top">
         <h2>About</h2>
         <Link to="/">X</Link>
@@ -13,10 +14,10 @@ export default function About() {
         <img src={profileImg} alt="" />
         <p>
           {" "}
-          I am a developer who strives to learn something daily. One of my life
-          goals is to become a professional bass fisherman. With the talents I
-          learn every day as a developer guide me down that path. I love being
-          the color in a world of binary.
+          I am a developer who strives to evolve daily. One of my life goals is
+          to become a professional bass fisherman. The knowledge I obtain every
+          day guides me closer to transcendence. I love being a source of color
+          in a binary world.
         </p>
       </div>
     </div>
