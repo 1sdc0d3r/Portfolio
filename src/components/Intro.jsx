@@ -4,13 +4,13 @@ import profileImg from "../images/profile_psudo.jpg";
 
 export default function Intro() {
   return (
-    <div className="intro">
+    <div className="intro clicker">
       <div className="top">
         <h2>Intro</h2>
         <Link to="/">X</Link>
       </div>
 
-      {/* //todo replace img for profile */}
+      {/* // todo replace profile img */}
       <div className="bottom">
         <img src={profileImg} alt="" />
         <p>

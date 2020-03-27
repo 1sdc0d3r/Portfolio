@@ -1,5 +1,6 @@
 $white: rgb(250, 250, 250);
-$grey: rgb(54, 59, 65);
+$darkGrey: rgb(54, 59, 65);
+$grey: rgb(85, 85, 85);
 $colors: (
   white: rgb(275, 275, 275)
 );
@@ -16,12 +17,30 @@ $colors: (
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @mixin section() {
-  // background-size: cover;
-  background: $grey;
+  background: $darkGrey;
   width: 78%;
   margin: auto;
   padding-bottom: 1.5rem;
+  animation: fade-in 0.6s linear;
+
+  @include for-tablet() {
+    height: 100%;
+    margin-bottom: 1.5rem;
+    // border: 5px solid green;
+  }
 
   @include for-desktop() {
     width: 55%;
@@ -42,14 +61,23 @@ $colors: (
       margin: 0.75rem -0.75rem;
       font-weight: bold;
       text-decoration: none;
-      color: rgb(206, 38, 38);
+      // color: rgb(206, 38, 38);
+      color: rgb(23, 24, 26);
       font-size: 1.75rem;
+      width: 1.75rem;
+      padding: 0.125rem;
+      &:hover {
+        background: $grey;
+        border-radius: 50%;
+      }
       @include for-tablet() {
         font-size: 1.65rem;
+        width: 1.65rem;
         margin: 0.4rem -0.5rem;
       }
       @include for-desktop() {
         font-size: 1.85rem;
+        width: 1.85rem;
         margin: 0.4rem -0.5rem;
       }
     }
@@ -74,36 +102,34 @@ $colors: (
       margin: 1rem auto;
       justify-content: space-around;
     }
+    // todo set max width
     img {
-      // add a min/max width
       margin-top: 2vh;
       width: 80%;
       height: 30%;
       @include for-tablet() {
         width: 65%;
         height: 50vh;
-        border: 2px groove $grey;
+        border: 2px groove $darkGrey;
       }
       @include for-desktop() {
         width: 40%;
         height: 35vh;
-        border: 2px groove $grey;
-        // border: 9px solid pink;
+        border: 2px groove $darkGrey;
       }
     }
     p {
       padding: 0 1rem;
       color: $white;
       font-size: 0.85rem;
-      // margin-bottom: 2rem;
+      line-height: 1.35rem;
+      letter-spacing: 0.085rem;
       @include for-tablet() {
         width: 80%;
         margin: 2rem auto;
       }
       @include for-desktop() {
         margin: auto;
-        line-height: 1.35rem;
-        letter-spacing: 0.085rem;
         width: 50%;
         justify-content: space-around;
         text-align: left;
@@ -122,16 +148,20 @@ $colors: (
   background-size: cover;
   width: 100%;
   height: 100vh;
+  padding-bottom: 10vh;
+  @include for-desktop {
+  }
 
   .overlay {
     background-image: url("../images/overlay.png");
     background-size: cover;
     width: 100%;
-    height: 80vh;
-    padding-top: 20vh;
+    height: 85%;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
     @include for-tablet() {
-      padding-top: 10vh;
-      height: 90vh;
+      // padding-top: 10vh;
+      // height: 100%;
     }
     @include for-desktop() {
       padding-top: 12vh;
@@ -139,18 +169,21 @@ $colors: (
     }
   }
 }
-.home .header {
-  border-top: 2px solid $white;
-  border-bottom: 2px solid $white;
-  width: 90%;
-  margin: 10vh auto 0.5rem;
-  @include for-tablet() {
-    width: 85%;
-    margin-bottom: 0;
-  }
-  @include for-desktop() {
-    width: 93%;
-    margin: auto;
+.home {
+  animation: fade-in 1.2s linear;
+  .header {
+    border-top: 2px solid $white;
+    border-bottom: 2px solid $white;
+    width: 90%;
+    margin: 10vh auto 0.5rem;
+    @include for-tablet() {
+      width: 85%;
+      margin-bottom: 0;
+    }
+    @include for-desktop() {
+      width: 93%;
+      margin: auto;
+    }
   }
 }
 h1 {
@@ -202,6 +235,9 @@ nav {
     padding: 0.35rem;
     text-decoration: none;
     color: $white;
+    &:hover {
+      color: $grey;
+    }
 
     @include for-tablet() {
       border: 1.25px solid $white;
@@ -223,7 +259,7 @@ nav {
 
 .work {
   @include section;
-  border: 5px solid $grey;
+  border: 5px solid $darkGrey;
 }
 
 .about {
@@ -267,7 +303,7 @@ nav {
       }
     }
     input {
-      background: $grey;
+      background: $darkGrey;
       color: $white;
       padding: 0.35rem;
       width: 80%;
@@ -280,7 +316,7 @@ nav {
       }
     }
     #message {
-      background: $grey;
+      background: $darkGrey;
       color: $white;
       width: 80%;
       padding: 0.35rem;
@@ -301,6 +337,9 @@ nav {
         width: 44%;
         border: 2px ridge $white;
         border-radius: 3%;
+        &:hover {
+          background: $grey;
+        }
       }
     }
   }
@@ -315,8 +354,10 @@ nav {
     a {
       margin: 0 2%;
       padding: 0.125rem;
-      // border: 2px solid red;
-      // border-radius: 50%;
+      border-radius: 50%;
+      &:hover {
+        background: rgb(189, 15, 96);
+      }
     }
   }
 }

@@ -6,11 +6,16 @@ import Intro from "./components/Intro";
 import Work from "./components/Work";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Loader from "./components/Loader";
 
 function App() {
+  // todo add animations (greensock?)
+  // todo change fonts
+  // todo click out of component to navigate home (other than X)
   return (
     <div className="App">
       <div className="overlay">
+        {/* <Loader /> */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/intro" component={Intro} />
