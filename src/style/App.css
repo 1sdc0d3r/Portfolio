@@ -81,9 +81,12 @@ h1 {
   }
 }
 
+p {
+  color: #ebebeb;
+}
+
 @media (min-width: 800px) {
   p {
-    color: #ebebeb;
     margin: 0.75rem auto;
     margin-bottom: 1.5rem;
     width: 60%;
@@ -112,11 +115,7 @@ nav {
     width: 65%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-top: 0;
-    border: 0.75px solid #ebebeb;
-    border-right: 2px solid #ebebeb;
-    border-left: 2px solid #ebebeb;
-    border-top: none;
+    margin-top: 3%;
   }
 }
 
@@ -149,6 +148,7 @@ nav a:hover {
     border-top: 0.5px solid #ebebeb;
     width: 25%;
     font-size: 1.2rem;
+    color: #c0380f;
   }
 }
 

@@ -192,9 +192,9 @@ h1 {
   }
 }
 p {
+  color: $white;
   @include for-desktop() {
     // color: #161616;
-    color: $white;
     margin: 0.75rem auto;
     margin-bottom: 1.5rem;
     width: 60%;
@@ -211,11 +211,7 @@ nav {
     flex-direction: row;
     width: 65%;
     justify-content: space-around;
-    margin-top: 0;
-    border: 0.75px solid $white;
-    border-right: 2px solid $white;
-    border-left: 2px solid $white;
-    border-top: none;
+    margin-top: 3%;
   }
   @include for-desktop() {
     flex-direction: row;
@@ -238,6 +234,7 @@ nav {
       border-top: 0.5px solid $white;
       width: 25%;
       font-size: 1.2rem;
+      color: $orange;
       // font-weight: bold;
     }
     @include for-desktop() {
