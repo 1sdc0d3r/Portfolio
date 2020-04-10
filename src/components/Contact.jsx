@@ -7,17 +7,17 @@ export default function Contact() {
   const [data, setData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
-  const onChangeHandler = evt => {
+  const onChangeHandler = (evt) => {
     setData({
       ...data,
-      [evt.target.name]: evt.target.value
+      [evt.target.name]: evt.target.value,
     });
   };
 
-  const onSubmitHandler = evt => {
+  const onSubmitHandler = (evt) => {
     evt.preventDefault();
 
     const templateParams = {
@@ -25,7 +25,7 @@ export default function Contact() {
       subject: "Portfolio Contact",
       to_name: "Braden",
       from_name: data.name,
-      message_html: data.message
+      message_html: data.message,
     };
 
     emailjs.send(
@@ -42,7 +42,7 @@ export default function Contact() {
     setData({
       name: "",
       email: "",
-      message: ""
+      message: "",
     });
   };
 
