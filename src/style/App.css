@@ -28,33 +28,23 @@
   background-size: cover;
   width: 100%;
   height: 100vh;
-  padding-bottom: 10vh;
 }
 
-.App .overlay {
-  background-image: url("../images/overlay.png");
-  background-size: cover;
+.App .particles-wrapper {
+  position: fixed;
   width: 100%;
-  height: 85%;
-  padding-top: 15vh;
-  padding-bottom: 10vh;
-}
-
-@media (min-width: 800px) {
-  .App .overlay {
-    padding-top: 12vh;
-    height: 88vh;
-  }
+  height: 100%;
 }
 
 .home {
   -webkit-animation: fade-in 1.2s linear;
           animation: fade-in 1.2s linear;
+  padding-top: 10%;
 }
 
 .home .header {
-  border-top: 2px solid #fafafa;
-  border-bottom: 2px solid #fafafa;
+  border-top: 2px solid #ebebeb;
+  border-bottom: 2px solid #ebebeb;
   width: 90%;
   margin: 10vh auto 0.5rem;
 }
@@ -76,7 +66,7 @@
 h1 {
   font-style: italic;
   font-size: 2rem;
-  color: #fafafa;
+  color: #c0380f;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -93,10 +83,10 @@ h1 {
 
 @media (min-width: 800px) {
   p {
-    color: #161616;
+    color: #ebebeb;
     margin: 0.75rem auto;
     margin-bottom: 1.5rem;
-    width: 90%;
+    width: 60%;
   }
 }
 
@@ -110,6 +100,7 @@ nav {
           flex-direction: column;
   width: 25%;
   margin: auto;
+  z-index: 20;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -122,9 +113,9 @@ nav {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     margin-top: 0;
-    border: 0.75px solid #fafafa;
-    border-right: 2px solid #fafafa;
-    border-left: 2px solid #fafafa;
+    border: 0.75px solid #ebebeb;
+    border-right: 2px solid #ebebeb;
+    border-left: 2px solid #ebebeb;
     border-top: none;
   }
 }
@@ -145,17 +136,17 @@ nav {
 nav a {
   padding: 0.35rem;
   text-decoration: none;
-  color: #fafafa;
+  color: #ebebeb;
 }
 
 nav a:hover {
-  color: #555555;
+  color: #c0380f;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
   nav a {
-    border: 1.25px solid #fafafa;
-    border-top: 0.5px solid #fafafa;
+    border: 1.25px solid #ebebeb;
+    border-top: 0.5px solid #ebebeb;
     width: 25%;
     font-size: 1.2rem;
   }
@@ -169,9 +160,9 @@ nav a:hover {
 }
 
 .intro {
-  background: #363b41;
+  background: #252525;
   width: 78%;
-  margin: auto;
+  margin: 7.25% auto;
   padding-bottom: 1.5rem;
   -webkit-animation: fade-in 0.6s linear;
           animation: fade-in 0.6s linear;
@@ -199,7 +190,7 @@ nav a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: #fafafa;
+  color: #ebebeb;
 }
 
 .intro .top a {
@@ -207,15 +198,14 @@ nav a:hover {
   margin: 0.75rem -0.75rem;
   font-weight: bold;
   text-decoration: none;
-  color: #17181a;
+  color: grey;
   font-size: 1.75rem;
   width: 1.75rem;
   padding: 0.125rem;
 }
 
 .intro .top a:hover {
-  background: #555555;
-  border-radius: 50%;
+  color: #c0380f;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -248,7 +238,6 @@ nav a:hover {
 @media (min-width: 800px) {
   .intro .top h2 {
     font-size: 2.2rem;
-    text-decoration: underline;
   }
 }
 
@@ -274,7 +263,7 @@ nav a:hover {
   .intro .bottom img {
     width: 65%;
     height: 50vh;
-    border: 2px groove #363b41;
+    border: 2px groove #252525;
   }
 }
 
@@ -282,13 +271,13 @@ nav a:hover {
   .intro .bottom img {
     width: 40%;
     height: 35vh;
-    border: 2px groove #363b41;
+    border: 2px groove #252525;
   }
 }
 
 .intro .bottom p {
   padding: 0 1rem;
-  color: #fafafa;
+  color: #ebebeb;
   font-size: 0.85rem;
   line-height: 1.35rem;
   letter-spacing: 0.085rem;
@@ -317,13 +306,13 @@ nav a:hover {
 }
 
 .work {
-  background: #363b41;
+  background: #252525;
   width: 78%;
-  margin: auto;
+  margin: 7.25% auto;
   padding-bottom: 1.5rem;
   -webkit-animation: fade-in 0.6s linear;
           animation: fade-in 0.6s linear;
-  border: 5px solid #363b41;
+  border: 5px solid #252525;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -348,7 +337,7 @@ nav a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: #fafafa;
+  color: #ebebeb;
 }
 
 .work .top a {
@@ -356,15 +345,14 @@ nav a:hover {
   margin: 0.75rem -0.75rem;
   font-weight: bold;
   text-decoration: none;
-  color: #17181a;
+  color: grey;
   font-size: 1.75rem;
   width: 1.75rem;
   padding: 0.125rem;
 }
 
 .work .top a:hover {
-  background: #555555;
-  border-radius: 50%;
+  color: #c0380f;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -397,7 +385,6 @@ nav a:hover {
 @media (min-width: 800px) {
   .work .top h2 {
     font-size: 2.2rem;
-    text-decoration: underline;
   }
 }
 
@@ -423,7 +410,7 @@ nav a:hover {
   .work .bottom img {
     width: 65%;
     height: 50vh;
-    border: 2px groove #363b41;
+    border: 2px groove #252525;
   }
 }
 
@@ -431,13 +418,13 @@ nav a:hover {
   .work .bottom img {
     width: 40%;
     height: 35vh;
-    border: 2px groove #363b41;
+    border: 2px groove #252525;
   }
 }
 
 .work .bottom p {
   padding: 0 1rem;
-  color: #fafafa;
+  color: #ebebeb;
   font-size: 0.85rem;
   line-height: 1.35rem;
   letter-spacing: 0.085rem;
@@ -466,9 +453,9 @@ nav a:hover {
 }
 
 .about {
-  background: #363b41;
+  background: #252525;
   width: 78%;
-  margin: auto;
+  margin: 7.25% auto;
   padding-bottom: 1.5rem;
   -webkit-animation: fade-in 0.6s linear;
           animation: fade-in 0.6s linear;
@@ -496,7 +483,7 @@ nav a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: #fafafa;
+  color: #ebebeb;
 }
 
 .about .top a {
@@ -504,15 +491,14 @@ nav a:hover {
   margin: 0.75rem -0.75rem;
   font-weight: bold;
   text-decoration: none;
-  color: #17181a;
+  color: grey;
   font-size: 1.75rem;
   width: 1.75rem;
   padding: 0.125rem;
 }
 
 .about .top a:hover {
-  background: #555555;
-  border-radius: 50%;
+  color: #c0380f;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -545,7 +531,6 @@ nav a:hover {
 @media (min-width: 800px) {
   .about .top h2 {
     font-size: 2.2rem;
-    text-decoration: underline;
   }
 }
 
@@ -571,7 +556,7 @@ nav a:hover {
   .about .bottom img {
     width: 65%;
     height: 50vh;
-    border: 2px groove #363b41;
+    border: 2px groove #252525;
   }
 }
 
@@ -579,13 +564,13 @@ nav a:hover {
   .about .bottom img {
     width: 40%;
     height: 35vh;
-    border: 2px groove #363b41;
+    border: 2px groove #252525;
   }
 }
 
 .about .bottom p {
   padding: 0 1rem;
-  color: #fafafa;
+  color: #ebebeb;
   font-size: 0.85rem;
   line-height: 1.35rem;
   letter-spacing: 0.085rem;
@@ -618,13 +603,13 @@ nav a:hover {
 }
 
 .contact {
-  background: #363b41;
+  background: #252525;
   width: 78%;
-  margin: auto;
+  margin: 7.25% auto;
   padding-bottom: 1.5rem;
   -webkit-animation: fade-in 0.6s linear;
           animation: fade-in 0.6s linear;
-  background: #4e4e4e;
+  margin-top: 5%;
   border: 3px solid black;
   border-radius: 1%;
 }
@@ -651,7 +636,7 @@ nav a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: #fafafa;
+  color: #ebebeb;
 }
 
 .contact .top a {
@@ -659,15 +644,14 @@ nav a:hover {
   margin: 0.75rem -0.75rem;
   font-weight: bold;
   text-decoration: none;
-  color: #17181a;
+  color: grey;
   font-size: 1.75rem;
   width: 1.75rem;
   padding: 0.125rem;
 }
 
 .contact .top a:hover {
-  background: #555555;
-  border-radius: 50%;
+  color: #c0380f;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -700,7 +684,6 @@ nav a:hover {
 @media (min-width: 800px) {
   .contact .top h2 {
     font-size: 2.2rem;
-    text-decoration: underline;
   }
 }
 
@@ -726,7 +709,7 @@ nav a:hover {
   .contact .bottom img {
     width: 65%;
     height: 50vh;
-    border: 2px groove #363b41;
+    border: 2px groove #252525;
   }
 }
 
@@ -734,13 +717,13 @@ nav a:hover {
   .contact .bottom img {
     width: 40%;
     height: 35vh;
-    border: 2px groove #363b41;
+    border: 2px groove #252525;
   }
 }
 
 .contact .bottom p {
   padding: 0 1rem;
-  color: #fafafa;
+  color: #ebebeb;
   font-size: 0.85rem;
   line-height: 1.35rem;
   letter-spacing: 0.085rem;
@@ -796,7 +779,7 @@ nav a:hover {
 
 .contact form label {
   margin: 0.35rem auto;
-  color: #fafafa;
+  color: #ebebeb;
   width: 85%;
   text-align: left;
   font-size: 0.95rem;
@@ -810,12 +793,12 @@ nav a:hover {
 }
 
 .contact form input {
-  background: #363b41;
-  color: #fafafa;
+  background: #323232;
+  color: #ebebeb;
   padding: 0.35rem;
   width: 80%;
   margin: 0.25rem auto 0.5rem;
-  border: 2px inset #fafafa;
+  border: 2px inset #ebebeb;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -826,12 +809,12 @@ nav a:hover {
 }
 
 .contact form #message {
-  background: #363b41;
-  color: #fafafa;
+  background: #252525;
+  color: #ebebeb;
   width: 80%;
   padding: 0.35rem;
   margin: 0.25rem auto 0.5rem;
-  border: 2px inset #fafafa;
+  border: 2px inset #ebebeb;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -856,12 +839,13 @@ nav a:hover {
 
 .contact form .actions input {
   width: 44%;
-  border: 2px ridge #fafafa;
+  border: 2px ridge #ebebeb;
   border-radius: 3%;
 }
 
 .contact form .actions input:hover {
-  background: #555555;
+  color: #c0380f;
+  border: 2px inset #c0380f;
 }
 
 .contact .icons {
@@ -888,5 +872,7 @@ nav a:hover {
 
 .contact .icons a:hover {
   background: #bd0f60;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=App.css.map */

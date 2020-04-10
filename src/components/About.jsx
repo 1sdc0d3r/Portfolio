@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 // import clickHandler from "../utils/clickHandlers";
-import profileImg from "../images/bass.jpg";
+import profileImg from "../images/profile_psudo.jpg";
 
 export default function About(props) {
   return (

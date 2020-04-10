@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { TweenMax } from "gsap";
+import ParticlesBg from "particles-bg";
 
 export default function Home(props) {
   const topSplit = useRef(null);
@@ -8,7 +9,7 @@ export default function Home(props) {
 
   useEffect(() => {
     const section = document.getElementsByClassName("clicker");
-    const handleClickOutside = evt => {
+    const handleClickOutside = (evt) => {
       if (section.length && !section[0].contains(evt.target)) {
         return props.history.push("/");
       }
@@ -21,21 +22,27 @@ export default function Home(props) {
 
   return (
     <div className="home">
+      {/* <div className="particles-wrapper">
+        <ParticlesBg
+          type="lines"
+          num={125}
+          // color={["#00FFFF", "#476AAE", "#ae47aa"]}
+          bg={true}
+          className="particles"
+        />
+      </div> */}
       <div className="header" ref={topSplit}>
         <h1 ref={topSplit}>Braden's Portfolio</h1>
         <p>
-          {" "}
-          This portfolio displays some skills I developed as a Lambda Web
-          Development Student. Some of my skills include:
-          <br />
-          HTML, CSS, SASS, Javascript, React, Redux, NodeJS, Express, SQL, as
-          well as testing.
+          I am a fullstack developer who codes his dreams into reality. I love
+          to help others solve their problems in unique solutions and bring
+          their dreams into existence.
         </p>
       </div>
       <nav ref={bottomSplit}>
-        <NavLink to="intro">Intro</NavLink>
-        <NavLink to="work">Work</NavLink>
+        {/* <NavLink to="intro">Intro</NavLink> */}
         <NavLink to="about">About</NavLink>
+        <NavLink to="work">Work</NavLink>
         <NavLink to="contact">Contact</NavLink>
       </nav>
     </div>
