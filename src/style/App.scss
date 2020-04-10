@@ -4,7 +4,7 @@ $grey: rgb(50, 50, 50);
 $colors: (
   white: rgb(275, 275, 275),
 );
-$orange: rgb(192, 56, 15);
+$blue: rgb(39, 134, 223);
 
 // Breakpoints
 @mixin for-tablet {
@@ -70,7 +70,7 @@ $orange: rgb(192, 56, 15);
       width: 1.75rem;
       padding: 0.125rem;
       &:hover {
-        color: $orange;
+        color: $blue;
         // background: $grey;
         // border-radius: 50%;
       }
@@ -87,7 +87,7 @@ $orange: rgb(192, 56, 15);
     }
     h2 {
       margin: 0.75rem auto 0.35rem;
-      // color: $orange;
+      // color: $blue;
       @include for-tablet() {
         font-size: 2.2rem;
         margin-top: 1.2rem;
@@ -181,9 +181,10 @@ $orange: rgb(192, 56, 15);
 }
 h1 {
   //todo change font
-  font-style: italic;
+  // font-style: italic;
   font-size: 2rem;
-  color: $orange;
+  color: $white;
+  margin: 1rem auto 0.85rem;
   @include for-tablet() {
     font-size: 3rem;
   }
@@ -195,7 +196,7 @@ p {
   color: $white;
   @include for-desktop() {
     // color: #161616;
-    margin: 0.75rem auto;
+    margin: 0 auto;
     margin-bottom: 1.5rem;
     width: 60%;
   }
@@ -226,7 +227,7 @@ nav {
     color: $white;
     // z-index: 20;
     &:hover {
-      color: $orange;
+      color: $blue;
     }
 
     @include for-tablet() {
@@ -234,7 +235,7 @@ nav {
       border-top: 0.5px solid $white;
       width: 25%;
       font-size: 1.2rem;
-      color: $orange;
+      color: $blue;
       // font-weight: bold;
     }
     @include for-desktop() {
@@ -301,6 +302,9 @@ nav {
       width: 80%;
       margin: 0.25rem auto 0.5rem;
       border: 2px inset $white;
+      &:focus {
+        outline: 2px solid $blue;
+      }
       @include for-tablet() {
         // border: 2px solid red;
         margin-bottom: 1rem;
@@ -314,6 +318,9 @@ nav {
       padding: 0.35rem;
       margin: 0.25rem auto 0.5rem;
       border: 2px inset $white;
+      &:focus {
+        outline: 2px solid $blue;
+      }
       @include for-tablet() {
         margin-bottom: 1.5rem;
       }
@@ -331,8 +338,8 @@ nav {
         border-radius: 3%;
         &:hover {
           // background: $grey;
-          color: $orange;
-          border: 2px inset $orange;
+          color: $blue;
+          border: 2px inset $blue;
         }
       }
     }
@@ -350,7 +357,7 @@ nav {
       padding: 0.125rem;
       border-radius: 50%;
       &:hover {
-        background: rgb(189, 15, 96);
+        background: $white;
         transform: scale(1.1);
       }
     }
