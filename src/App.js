@@ -31,7 +31,7 @@ function App() {
         {bp && (
           <ParticlesBg
             type="lines"
-            num={bp.sm ? 25 : bp.md ? 50 : 125}
+            num={bp.sm ? 25 : bp.md ? 50 : 100}
             // color={["#00FFFF", "#476AAE", "#ae47aa"]}
             bg={true}
             className="particles"

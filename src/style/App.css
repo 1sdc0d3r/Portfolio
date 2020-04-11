@@ -64,9 +64,9 @@
 }
 
 h1 {
-  font-style: italic;
   font-size: 2rem;
-  color: #c0380f;
+  color: #ebebeb;
+  margin: 1rem auto 0.85rem;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -87,7 +87,7 @@ p {
 
 @media (min-width: 800px) {
   p {
-    margin: 0.75rem auto;
+    margin: 0 auto;
     margin-bottom: 1.5rem;
     width: 60%;
   }
@@ -139,7 +139,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #c0380f;
+  color: #2786df;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -148,7 +148,7 @@ nav a:hover {
     border-top: 0.5px solid #ebebeb;
     width: 25%;
     font-size: 1.2rem;
-    color: #c0380f;
+    color: #2786df;
   }
 }
 
@@ -205,7 +205,7 @@ nav a:hover {
 }
 
 .intro .top a:hover {
-  color: #c0380f;
+  color: #2786df;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -352,7 +352,7 @@ nav a:hover {
 }
 
 .work .top a:hover {
-  color: #c0380f;
+  color: #2786df;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -498,7 +498,7 @@ nav a:hover {
 }
 
 .about .top a:hover {
-  color: #c0380f;
+  color: #2786df;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -651,7 +651,7 @@ nav a:hover {
 }
 
 .contact .top a:hover {
-  color: #c0380f;
+  color: #2786df;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -801,6 +801,10 @@ nav a:hover {
   border: 2px inset #ebebeb;
 }
 
+.contact form input:focus {
+  outline: 2px solid #2786df;
+}
+
 @media (min-width: 450px) and (max-width: 800px) {
   .contact form input {
     margin-bottom: 1rem;
@@ -815,6 +819,10 @@ nav a:hover {
   padding: 0.35rem;
   margin: 0.25rem auto 0.5rem;
   border: 2px inset #ebebeb;
+}
+
+.contact form #message:focus {
+  outline: 2px solid #2786df;
 }
 
 @media (min-width: 450px) and (max-width: 800px) {
@@ -844,8 +852,8 @@ nav a:hover {
 }
 
 .contact form .actions input:hover {
-  color: #c0380f;
-  border: 2px inset #c0380f;
+  color: #2786df;
+  border: 2px inset #2786df;
 }
 
 .contact .icons {
@@ -871,7 +879,7 @@ nav a:hover {
 }
 
 .contact .icons a:hover {
-  background: #bd0f60;
+  background: #ebebeb;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
