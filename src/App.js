@@ -19,7 +19,7 @@ const queries = {
 function App() {
   // todo change fonts
   // todo click out of component to navigate home (other than X)
-  // todo borders in boxses, change grey to lighter gray with black wording, add logic strengths in about me
+  // todo borders in boxes, change grey to lighter gray with black wording, add logic strengths in about me
   // todo darkmode
 
   const bp = useBreakpoint(queries);
